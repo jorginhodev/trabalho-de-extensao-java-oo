@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Lista de Moradores</title>
+</head>
+<body>
+<h1>Lista de Moradores</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Endereço</th>
+    <th>Telefone</th>
+    <th>Email</th>
+  </tr>
+  <tr th:each="morador : ${moradores}">
+    <td th:text="${morador.id}"></td>
+    <td th:text="${morador.nome}"></td>
+    <td th:text="${morador.endereco}"></td>
+    <td th:text="${morador.telefone}"></td>
+    <td th:text="${morador.email}"></td>
+  </tr>
+</table>
+<a href="/moradores/novo">Adicionar Novo Morador</a>
+</body>
+</html>
